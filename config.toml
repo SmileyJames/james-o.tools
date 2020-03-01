@@ -1,4 +1,9 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://www.james-o.tools/"
+languageCode = "en-gb"
+title = "James O'Toole"
 theme = "blind"
+
+[params]
+  email = "contact@james-o.tools"
+  github = "https://www.github.com/SmileyJames/"
+  linkdin = "https://linkdin.com/JamesOToole/"

@@ -3,7 +3,7 @@
         <div class="col-4 pt-1">
         </div>
         <div class="col-4 text-center">
-            <a class=" blog-header-logo text-dark" href="#">James O'Toole</a>
+            <a class=" blog-header-logo text-dark" href="/">{{ .Site.Title }}</a>
         </div>
         <div class="col-4 pt-1 d-flex justify-content-end align-items-center">
         </div>
@@ -15,7 +15,7 @@
         <a class="p-2 text-muted" href="/contact">Contact</a>
         <a class="p-2 text-muted" href="/art_post">Art Portfolio</a>
         <a class="p-2 text-muted" href="/tech_post">Tech Blog</a>
-        <a class="p-2 text-muted" href="#">Github</a>
-        <a class="p-2 text-muted" href="#">Linked In</a>
+        <a class="p-2 text-muted" href="{{ .Param "github" }}">Github</a>
+        <a class="p-2 text-muted" href="{{ .Param "linkdin" }}">Linked In</a>
     </nav>
 </div>
