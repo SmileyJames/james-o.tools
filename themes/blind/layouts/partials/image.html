@@ -22,21 +22,23 @@
 
 <div class="img" style="background: url(data:image/jpeg;base64,{{ $lqip.Content | base64Encode  }}); background-size: cover">
   <svg width="{{ $src.Width }}" height="{{ $src.Height }}" aria-hidden="true"></svg>
-  <img
-    srcset='
-    {{ if ge $src.Width "500" }}
-      {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "800" }}
-      {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "1200" }}
-      {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
-    {{ end }}
-    {{ if ge $src.Width "1500" }}
-      {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
-    {{ end }}'
-    src="{{ $src.RelPermalink }}"
-    width="{{ $src.Width }}" height="{{ $src.Height }}"
-    alt="{{ .Alt }}">
+  <div class="img__inner">
+    <img
+      srcset='
+      {{ if ge $src.Width "500" }}
+        {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "800" }}
+        {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "1200" }}
+        {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
+      {{ end }}
+      {{ if ge $src.Width "1500" }}
+        {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
+      {{ end }}'
+      src="{{ $src.RelPermalink }}"
+      width="{{ $src.Width }}" height="{{ $src.Height }}"
+        alt="{{ .Alt }}">
+  </div>
 </div>
