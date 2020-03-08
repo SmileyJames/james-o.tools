@@ -1,17 +1,21 @@
 {{ define "main" }}
 <div class="row">
     <div class="col-12">
-        <h3 class="title">
-            {{ .Title }}
-        </h3>
+        {{ partial "image.html" (dict "context" . "Resources" .Page.Resources "Alt" .Title) }}
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-12">
+        <h3 class="title">{{ .Title }}</h3>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-10 col-lg-7 col-xl-5">
+        <p class="h6">{{ .Param "medium" }}</p>
         <p class="text-muted">{{ .Param "author" }}</p>
-    </div>
-    <div class="col-3">
+        <p class="h6">{{ .Param "size" }}</p>
         <p class="text-muted">{{ .Date.Format "Jan 2 2006" }}</p>
     </div>
 </div>

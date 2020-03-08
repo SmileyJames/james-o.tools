@@ -1,10 +1,30 @@
 {{ define "main" }}
-{{.Content}}
-{{ range .Pages }}
-<div>
-    <p>
-        {{ .Title }}
-    </p>
+<div class="row">
+    <div class="col-12">
+        <h3 class="title">
+            {{ .Title }}
+        </h3>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-10 col-lg-7 col-xl-5">
+        {{.Content}}
+    </div>
+</div>
+
+{{ range .Paginator.Pages }}
+<div class="row mb-5">
+    <div class="col-md-10 col-lg-7">
+       {{ .Render "summary" }}
+    </div>
 </div>
 {{ end }}
+
+<div class="row mt-5">
+    <div class="offset-md-4 col-4">
+        {{ template "_internal/pagination.html" . }}
+    </div>
+</div>
+
 {{ end }}

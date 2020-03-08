@@ -2,6 +2,7 @@ baseURL = "https://www.james-o.tools/"
 languageCode = "en-gb"
 title = "James O'Toole"
 theme = "blind"
+paginate = 5
 
 [params]
   email = "contact@james-o.tools"
