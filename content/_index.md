@@ -6,7 +6,3 @@ art_feature: "woman-in-forest.md"
 tech_feature: "arduino-markov.md"
 draft: true
 ---
-
-# Hello
-
-This is James O'Toole's personal website.
