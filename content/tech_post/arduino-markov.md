@@ -3,7 +3,7 @@
 title: "The Learning Line Follower"
 author: James O'Toole
 date: 2020-03-01T17:51:39Z
-draft: true
+draft: false 
 ---
 Be warned, this tale is a tragedy.
 
