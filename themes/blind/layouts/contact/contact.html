@@ -1,17 +1,12 @@
 {{ define "main" }}
-
 <div class="row">
     <div class="col-12 text-center my-5">
         <h3>{{ .Title }}</h3>
         {{ .Content }}
         <p>
-            <a href="mailto:{{ .Param "email" }}">{{ .Param "email" }}</a>
+            <a class="stretched-link" href="mailto:{{ .Param "email" }}">{{ .Param "email" }}</a>
         </p>
     </div>
 </div>
-
-
-
 {{ end }}
-
 {{ define "footer" }}.{{ end }}

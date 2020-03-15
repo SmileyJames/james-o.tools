@@ -1,10 +1,10 @@
 ---
-title: "Hello world"
+title: "Homepage"
 date: 12/12/2019
-featured_post: "/art_post/something.md"
-art_feature: "woman-in-forest.md"
+featured_post: "/art_post/chaise_longue.md"
+art_feature: "two_spiders.md"
 tech_feature: "arduino-markov.md"
 draft: false 
 ---
-Hello world
 
+#### Welome to the personal website of **James O'Toole**, with **art** and writing about **computers and software**.

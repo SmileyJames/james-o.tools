@@ -1,7 +1,9 @@
+#! /usr/local/bin/python3
+
 import os
 import csv
 from collections import namedtuple
-from shutil import copyfile
+from shutil import copyfile, rmtree
 
 
 def slugify(s):
@@ -29,15 +31,19 @@ def get_path(slug):
 
 
 def mkdir(art, slug):
+    def _mk(o):
+        try:
+            os.mkdir(o)
+        except FileExistsError:
+            pass
+
     path = get_path(slug)
-    try:
-        os.mkdir(path)
-    except FileExistsError:
-        pass
-    try:
-        os.mkdir(os.path.join(path, 'images'))
-    except FileExistsError:
-        pass
+    _mk('content/art_post')
+    _mk(path)
+    _mk(os.path.join(path, 'images'))
+
+def rmdir(slug):
+    rmtree(get_path(slug))
 
 
 def write_markdown(art, slug):
@@ -66,8 +72,12 @@ def main():
             slug = slugify(art.title)
             print(slug, '...')
             mkdir(art, slug)
-            write_markdown(art, slug)
-            copy_image(art, slug)
+            try:
+                copy_image(art, slug)
+                write_markdown(art, slug)
+            except FileNotFoundError:
+                rmdir(slug)
+                print('Not found', slug, 'image')
 
 
 if __name__ == '__main__':

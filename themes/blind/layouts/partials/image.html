@@ -1,21 +1,13 @@
 {{/* get file that matches the filename as specified as src="" in shortcode */}}
 {{ $src := index (.Resources.ByType "image") 0 }}
 
-{{/* set image sizes, these are hardcoded for now, x dictates that images are resized to this width */}}
-
-{{ $lqipw := default "20x" }}
-{{ $tinyw := default "500x" }}
-{{ $smallw := default "800x" }}
-{{ $mediumw := default "1200x" }}
-{{ $largew := default "1500x" }}
-
 {{/* resize the src image to the given sizes */}}
 
-{{ $lqip := $src.Resize $lqipw }}
-{{ $tiny := $src.Resize $tinyw }}
-{{ $small := $src.Resize $smallw }}
-{{ $medium := $src.Resize $mediumw }}
-{{ $large := $src.Resize $largew }}
+{{ $lqip := $src.Resize "20x q30" }}
+{{ $tiny := $src.Resize "500x q80" }}
+{{ $small := $src.Resize "800x q80" }}
+{{ $medium := $src.Resize "1200x q80" }}
+{{ $large := $src.Resize "1500x q80" }}
 
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}

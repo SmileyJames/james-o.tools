@@ -1,17 +1,24 @@
 {{ define "main" }}
 
     <div class="row mb-3">
-        <div class="col-md-6">
+        <div class="col-12">
             {{.Content}}
         </div>
     </div>
 
     {{ with .Site.GetPage (.Param "featured_post") }}
     <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-        <div class="col-md-6">
-            <h1 class="display-4 font-italic">{{ .Title }}</h1>
-            <p class="lead my-3">{{ .Summary }}</p>
-            <p class="lead mb-0"><a href="{{ .Permalink }}" class="text-white font-weight-bold">Continue reading...</a></p>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{{ .Permalink }}" class="stretched-link">
+                    {{ partial "image.html" (dict "context" . "Resources" .Resources "Alt" .Title) }}
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-4 font-italic">{{ .Title }}</h1>
+                <p class="lead my-3">{{ .Summary }}</p>
+                <p class="lead mb-0"><a href="{{ .Permalink }}" class="stretched-link text-white font-weight-bold">View larger...<a></p>
+            </div>
         </div>
     </div>
     {{ end }}
@@ -25,8 +32,9 @@
                     <strong class="d-inline-block mb-2 text-primary">Art</strong>
                     <h3 class="mb-0">{{ .Title }}</h3>
                     <div class="mb-1 text-muted">{{ .Date.Format "Jan 2 2006" }}</div>
+                    {{ partial "image.html" (dict "context" . "Resources" .Resources "Alt" .Title) }}
                     <p class="card-text mb-auto">{{ .Summary }}</p>
-                    <a href="{{ .Permalink }}" class="stretched-link">Continue reading</a>
+                    <a href="{{ .Permalink }}" class="stretched-link">View larger</a>
                 </div>
             </div>
         </div>
