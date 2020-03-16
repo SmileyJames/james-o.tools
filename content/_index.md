@@ -7,4 +7,4 @@ tech_feature: "arduino-markov.md"
 draft: false 
 ---
 
-#### Welome to the personal website of **James O'Toole**, with **art** and writing about **computers and software**.
+#### Welcome to the personal website of **James O'Toole**, with **art** and writing about **computers and software**.
