@@ -1,0 +1,7 @@
+www2.james-o.tools {
+	root * /home/jotoole/james-o.tools/
+	file_server
+	log {
+		output file /home/jotoole/james-o.tools/access.log
+	}
+}

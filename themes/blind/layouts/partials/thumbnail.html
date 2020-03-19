@@ -4,9 +4,8 @@
 {{/* resize the src image to the given sizes */}}
 
 {{ $lqip := $src.Resize "20x q30" }}
-{{ $tiny := $src.Resize "500x q80" }}
-{{ $small := $src.Resize "800x q80" }}
-{{ $medium := $src.Resize "1200x q80" }}
+{{ $tiny := $src.Resize "100x q60" }}
+{{ $small := $src.Resize "300x q60" }}
 {{ $large := $src.Resize "1500x q80" }}
 
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
@@ -17,20 +16,14 @@
   <div class="img__inner">
     <img
       srcset='
-      {{ if ge $src.Width "500" }}
-        {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+      {{ if ge $src.Width "100" }}
+        {{ with $tiny.RelPermalink }}{{.}} 800w{{ end }}
       {{ end }}
-      {{ if ge $src.Width "800" }}
-        {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
-      {{ end }}
-      {{ if ge $src.Width "1200" }}
-        {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
-      {{ end }}
-      {{ if ge $src.Width "1500" }}
-        {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
+      {{ if ge $src.Width "300" }}
+        {{ with $small.RelPermalink }}, {{.}} 1200w{{ end }}
       {{ end }}'
       src="{{ $large.RelPermalink }}"
       width="{{ $src.Width }}" height="{{ $src.Height }}"
-        alt="{{ .Alt }}">
+      alt="{{ .Alt }}">
   </div>
 </div>
