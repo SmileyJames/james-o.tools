@@ -1,4 +1,8 @@
-www2.james-o.tools {
+james-o.tools {
+    redir https://www.james-o.tools{uri}
+}
+
+www.james-o.tools {
 	root * /home/jotoole/james-o.tools/
 	file_server
 	log {

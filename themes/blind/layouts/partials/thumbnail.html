@@ -4,14 +4,14 @@
 {{/* resize the src image to the given sizes */}}
 
 {{ $lqip := $src.Resize "20x q30" }}
-{{ $tiny := $src.Resize "100x q60" }}
+{{ $tiny := $src.Resize "200x q60" }}
 {{ $small := $src.Resize "300x q60" }}
 {{ $large := $src.Resize "1500x q80" }}
 
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<div class="img" style="background: url(data:image/jpeg;base64,{{ $lqip.Content | base64Encode  }}); background-size: cover">
+<div class="img mb-2 mb-sm-0" style="background: url(data:image/jpeg;base64,{{ $lqip.Content | base64Encode  }}); background-size: cover">
   <svg width="{{ $src.Width }}" height="{{ $src.Height }}" aria-hidden="true"></svg>
   <div class="img__inner">
     <img
