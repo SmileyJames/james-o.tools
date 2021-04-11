@@ -1,4 +1,4 @@
-name: github pages
+name: deploy
 
 on:
   push:
@@ -9,16 +9,24 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use NodeJS
+        uses: actions/setup-node@v2
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          node-version: '14'
+
+      - name: Install Build Tools
+        run: npm install --prefix=./themes/blind
+
+      - name: Build Styles
+	    run: npm --prefix=./themes/blind run build
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.81.0'
-          # extended: true
 
       - name: Build
         run: hugo --minify
