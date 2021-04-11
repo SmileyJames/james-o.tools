@@ -22,7 +22,7 @@ jobs:
 
       - name: Build Styles
         run: npm --prefix=./themes/blind run build
-	
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
