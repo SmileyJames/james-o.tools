@@ -87,3 +87,5 @@ I hope that this has given you some ideas on how to make report writing a little
 ![Robot with stack of paper and thumb in the air](./images/robot_with_stack_of_paper.png)
 ![Robot showing paper to classroom of students](./images/robot_showing_paper_to_class.png)
 ![Robot writing at a desk](./images/robot_writing_at_desk.png)
+
+Copyright released by James O'Toole according to ["No rights reserved"](https://creativecommons.org/share-your-work/public-domain/cc0/)
