@@ -8,7 +8,7 @@ draft: false
 
 # Press Release
 
-## (Reports Writer)[https://www.reportswriter.com]
+## [Reports Writer](https://www.reportswriter.com)
 
 Reports Writer is a new and exciting artificial intelligence technology that assists teachers in writing end of year reports for their students. It is a web application that allows teachers to create a spreadsheet of their students, and then generate a report for each student. The software is much more powerful than existing comment bank tools, which often sound robotic or lack sentence structure and flow.
 
@@ -16,9 +16,9 @@ Teachers can write better reports, faster and generate prose reports customised 
 
 ![Robot writing at a desk](./images/robot_writing_at_desk_3.png)
 
-Please link to: (https://www.reportswriter.com)[https://www.reportswriter.com]
+Please link to: [https://www.reportswriter.com](https://www.reportswriter.com)
 
-All copy text and images are released ("No rights reserved")[https://creativecommons.org/share-your-work/public-domain/cc0/]
+All copy text and images are released ["No rights reserved"](https://creativecommons.org/share-your-work/public-domain/cc0/)
 
 ### Introduction
 
@@ -81,7 +81,7 @@ It's interesting to see how technology is changing the way we teach and learn. W
 
 I hope that this has given you some ideas on how to make report writing a little easier for you. I know that there are hundreds of reports to be written over the next few months and I wish you all the best of luck, whether you are hand writing, typing or generating your reports this year. Thank you for all that you do for your students.
 
-#### (https://www.reportswriter.com)[https://www.reportswriter.com]
+#### [https://www.reportswriter.com](https://www.reportswriter.com)
 
 ![Happy student holding a report card](./images/happy_student_holding_report_card.png)
 ![Robot with stack of paper and thumb in the air](./images/robot_with_stack_of_paper.png)
